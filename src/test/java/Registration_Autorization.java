@@ -1,6 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -50,6 +52,7 @@ public class Registration_Autorization {
         }
 
         @Test
+
         public void registration() throws InterruptedException {
             Data getData = new Data();
             driver.findElement(btnVoity).click();
