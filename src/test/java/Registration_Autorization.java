@@ -141,18 +141,7 @@ public class Registration_Autorization {
           driver.quit();
      }
 
-    @AfterAll
-    public void checkBrowser() {
-        WebDriver driver = new ChromeDriver();
-        List<LogEntry> allLogRows = driver.manage().logs().get(LogType.BROWSER).getAll();
-    if(!allLogRows.isEmpty()){
-        if(allLogRows.size() > 0 ){
-            allLogRows.forEach(logEntry -> {
-                System.out.println(logEntry.getMessage());
-            });
-        }
-    }
-    }
+
 
 
 
