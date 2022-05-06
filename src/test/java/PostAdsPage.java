@@ -1,6 +1,9 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +32,9 @@ public class PostAdsPage {
 
     }
 
-    @Test // проверяем работает ли ссылка
+    @Test
+    @DisplayName("Проверяем работает ли ссылка на кнопке '+Разместить объявление'")
+    @Severity(SeverityLevel.CRITICAL)
     public void clickPostAds(){
         DataPostAdsPage getDataPostAdsPage = new DataPostAdsPage();
         driver.get(getDataPostAdsPage.getUrl1);
@@ -38,7 +43,9 @@ public class PostAdsPage {
         Assertions.assertTrue(title.equals("Разместить объявление о продаже недвижимости на ЦИАН, подать объявление о продаже или аренде недвижимости бесплатно - ЦИАН"));
     }
 
-    @Test // проверяем правильно ли работает радио-батн
+    @Test
+    @DisplayName("Проверяем правильно ли работает радио-батн")
+    @Severity(SeverityLevel.MINOR)
     public void radioBtn() throws InterruptedException {
         DataPostAdsPage getDataPostAdsPage = new DataPostAdsPage();
         driver.get(getDataPostAdsPage.getUrl2);
